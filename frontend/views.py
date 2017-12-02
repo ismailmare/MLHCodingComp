@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.template.loader import get_template
 
-def hello(request):
-   text = """<h1>welcome to my app !</h1>"""
-   return HttpResponse(text)
+def index(request):
+    return render(request, "index.html", {})

@@ -25,7 +25,7 @@ SECRET_KEY = 'dbpg3ukyaj)ia%zr+8!qv2yb+87r=c@=u0$hrq%$mp5)#f)_e#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [8080,8000,3000]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'mlhProj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['./frontend/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
