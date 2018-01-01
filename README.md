@@ -36,8 +36,6 @@ TODO
 TODO
 
 ## Built With
-
-* [Python](https://www.python.org/downloads/release/python-360/) - Language
 * [Django](https://docs.djangoproject.com/en/2.0/releases/1.11/) - Web Framework
 * [Javascript](https://www.javascript.com) - Front End
 * [Bootstrap](https://getbootstrap.com) - UI
