@@ -8,7 +8,7 @@
 TODO
 
 ## Getting Started
-After completing installation, navigate to http://localhost:8080/ to operate.
+After completing installation, navigate to http://localhost:8000/ to operate.
 
 ### Prerequisites
 TODO
