@@ -135,7 +135,7 @@ body{
 header.masthead{
     padding-top:10rem;
     padding-bottom:calc(10rem - 56px);
-    background-image:url(../img/header.jpg);
+    background-image:url("../img/header.396d46f1e6ae.jpg");
     background-position:center center;
     -webkit-background-size:cover;
     -moz-background-size:cover;
@@ -143,7 +143,7 @@ header.masthead{
     background-size:cover
 }
 div.background{
-    background-image:url(../img/background.jpg);
+    background-image:url("../img/background.2fd81f938d18.jpg");
     -webkit-background-size:cover;
     -moz-background-size:cover;
     -o-background-size:cover;
