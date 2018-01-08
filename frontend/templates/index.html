@@ -39,7 +39,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+              <a class="nav-link" href="{% url 'about' %}">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#HowItWorks">How It Works</a>
@@ -52,7 +52,7 @@
       </div>
     </nav>
 
-    <header class="masthead text-center text-white d-flex">
+    <header class="masthead home text-center text-white d-flex">
       <div class="container my-auto">
         <div class="row">
           <div class="col-lg-10 mx-auto">
@@ -62,7 +62,7 @@
             <hr>
           </div>
           <div class="col-lg-8 mx-auto">
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="">Explore Your Campus</a>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="{% url 'campus' %}">Explore Your Campus</a>
           </div>
         </div>
       </div>
@@ -171,8 +171,6 @@
                 </div>
             </div>
           </div>
-        </div>
-      </div>
         </div>
       </div>
     </section>

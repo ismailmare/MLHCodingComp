@@ -26,6 +26,15 @@ a:hover{
 h1,h2,h3,h4,h5,h6{
     font-family:'Open Sans','Helvetica Neue',Arial,sans-serif
 }
+
+h1.skinny{
+    font-weight: lighter;
+}
+
+p.skinny{
+    font-weight: lighter;
+}
+
 .bg-primary{
     background-color:#f05f40!important
 }
@@ -135,12 +144,35 @@ body{
 header.masthead{
     padding-top:10rem;
     padding-bottom:calc(10rem - 56px);
-    background-image:url(../img/header.jpg);
+
     background-position:center center;
     -webkit-background-size:cover;
     -moz-background-size:cover;
     -o-background-size:cover;
     background-size:cover
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.top {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+header.about{
+    background-image:url(../img/about.png);
+}
+
+header.home{
+    background-image:url(../img/header.jpg);
+}
+
+header.campus{
+    background-image:url(../img/genericimg.jpg);
 }
 div.background{
     background-image:url(../img/background.jpg);
@@ -170,7 +202,7 @@ header.masthead p{
 @media (min-width:992px){
     header.masthead{
         height:100vh;
-        min-height:650px;
+        min-height:450px;
         padding-top:0;
         padding-bottom:0
     }
