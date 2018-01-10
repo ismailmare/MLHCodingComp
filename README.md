@@ -5,12 +5,12 @@
 
 
 ### Installing
-sudo yum install python3.6
-sudo yum install python3.6 pip
-sudo python3.6 -m pip install django=1.11
-sudo python3.6 -m pip install requests
-sudo python3.6 -m pip install WhiteNoise
-sudo python3.6 -m pip install brotlipy
+* sudo yum install python3.6
+* sudo yum install python3.6 pip
+* sudo python3.6 -m pip install django=1.11
+* sudo python3.6 -m pip install requests
+* sudo python3.6 -m pip install WhiteNoise
+* sudo python3.6 -m pip install brotlipy
 
 
 ## Getting Started
