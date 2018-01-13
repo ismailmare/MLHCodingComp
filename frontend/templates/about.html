@@ -32,7 +32,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img class="img-fluid" src="{% static 'img/logo.svg' %}" style="width: 25%; height: 25%" alt=""></a>
+        <a class="navbar-brand js-scroll-trigger" href="{% url 'index' %}"><img class="img-fluid" src="{% static 'img/logo.svg' %}" style="width: 25%; height: 25%" alt=""></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -42,10 +42,10 @@
               <a class="nav-link" href="{% url 'index' %}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#HowItWorks">How It Works</a>
+              <a class="nav-link js-scroll-trigger" href="{% url 'index' %}">How It Works</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+              <a class="nav-link js-scroll-trigger" href="{% url 'contact' %}">Contact</a>
             </li>
           </ul>
         </div>
@@ -55,27 +55,41 @@
     <header class="masthead about text-center text-white d-flex">
       <div class="container my-auto">
         <div class="row">
-          <div class="col-lg-10 mx-auto">
-            <h1 class="text">
-                BUILT BY <br/> STUDENTS <br/>FOR STUDENTS
+          <div class="col-lg-12 text-center">
+            <h1 class="text-white text-center largetext">
+                BUILT BY STUDENTS,<br/>FOR STUDENTS
             </h1>
-            <hr>
+              <hr class="my-4">
           </div>
-          <div class="col-lg-8 mx-auto">
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href=""></a>
+          <div class="col-lg-12 mx-auto">
+            <a class="-arrow-down icon" href=""></a>
           </div>
         </div>
       </div>
     </header>
 
-    <section class="bg-primary" id="about">
+
+    <section id="About Us">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">We've got what you need!</h2>
-            <hr class="light my-4">
-            <p class="text-faded mb-4">Our app will allow you to streamline your hunger-solving process with the ability to save your favourite food, track your orders, save your payment methods, budget efficiently, and more.</p>
-            <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
+          <div class="text-center">
+            <h1 class="largetext">ABOUT US</h1>
+            <hr class="my-4">
+            <p class="text-dark mb-4">StudentsEat is an on-campus food delivery service which delivers local food and beverages directly to any students’ location within a campus.
+StudentsEat was founded by a group of students in late 2017, who recognized a better way for students to balance their hunger and studies.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="About Us" class="bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h1 class="section-heading largetext">Direct Delivery</h1>
+            <hr class="my-4">
+            <p class="text-dark mb-4">With us, you will never need to leave your seat for food again. Simply let us know where you’re studying, and we’ll deliver your food directly to you. Save time by not having to pack your bags and trek across your campus.</p>
           </div>
         </div>
       </div>
@@ -85,63 +99,50 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading">How It Works</h2>
+            <h1 class="section-heading largetext">Food. Fast.</h1>
             <hr class="my-4">
+            <p class="text-dark mb-4">Nobody wants to wait an hour for their food to arrive. With knowledgeable Student Agents delivering your food, you can trust in their ability to grab and deliver your order – fast.</p>
           </div>
         </div>
       </div>
-        <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-sm-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <img class="img-fluid" src="{% static 'img/laptop.svg' %}" style="width: 25%; height: 25%" alt="">
-              <h3 class="mb-3">Choose your vender</h3>
-              <p class="text-muted mb-0">We have different restaurants, inside and outside of your campus, to choose from.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <img class="img-fluid" src="{% static 'img/plateknife.svg' %}" style="width: 25%; height: 25%" alt="">
-              <h3 class="mb-3">Place Your Order</h3>
-              <p class="text-muted mb-0">Browse through our growing menu options and satisfy your cravings by placing an order.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <img class="img-fluid" src="{% static 'img/student.svg' %}" style="width: 25%; height: 25%" alt="">
-              <h3 class="mb-3">Your Order, Delivered</h3>
-              <p class="text-muted mb-0">Your order is delivered to your exact spot. Save time by avoiding the long line-ups.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-        </div>
-
     </section>
 
-    <section id="contact">
+    <section id="About Us" class="bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-24 text-center">
+            <h1 class="section-heading largetext">Less Fees</h1>
+            <hr class="my-4">
+            <p class="text-dark mb-4">Living the student life and paying tuition fees is not easy. Let’s not complicate life even more by forcing you to pay five-dollar delivery fees. StudentsEat is committed to keeping delivery fees as low as possible so that you do not feel guilty about taking care of your hunger at school.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Ready To Order">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading">Get In Touch!</h2>
+            <h1 class="section-heading largetext">Ready To Order?</h1>
             <hr class="my-4">
             <p class="mb-5"></p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-4 ml-auto text-center">
-            <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
-            <p>123-456-6789</p>
+        <div class="col-lg-8 mx-auto text-center ">
+            <a class="btn btn-primary btn-xl js-scroll-trigger"  href="{% url 'campus' %}">Explore Your Campus</a>
           </div>
-          <div class="col-lg-4 mr-auto text-center">
-            <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
-            <p>
-              <a href="mailto:info@studentseat.com">info@studentseat.com</a>
-            </p>
+      </div>
+    </section>
+
+    <section id="footer" class="bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
           </div>
         </div>
       </div>
     </section>
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>

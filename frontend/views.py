@@ -20,6 +20,8 @@ def campus(request):
 
     response = requests.request("GET", url, headers=headers)
 
-
-
     return render(request, "campus.html", {})
+
+def contact(request):
+
+    return render(requests, "contact.html", {})
