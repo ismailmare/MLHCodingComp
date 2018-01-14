@@ -20,4 +20,5 @@ urlpatterns = (
     url(r'^about/$', views.about, name='about'),
     url(r'^campus/$', views.campus, name='campus'),
     url(r'^contact/$', views.contact, name='contact'),
+    url(r'^emailsent/$', views.emailsent, name='emailsent'),
 )

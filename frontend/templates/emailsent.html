@@ -45,7 +45,7 @@
               <a class="nav-link js-scroll-trigger" href="{% url 'index' %}">How It Works</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="{% url 'contact' %}">Contact</a>
+              <a class="nav-link js-scroll-trigger" href="#">Contact</a>
             </li>
           </ul>
         </div>
@@ -57,49 +57,14 @@
         <div class="row">
           <div class="col-lg-10 mx-auto">
             <h2 class="text">
-              Get In Touch
+              Message Sent
             </h2>
             <hr>
           </div>
           <div class="col-lg-8 mx-auto">
-              <p class="text-light">We’ll answer any questions as soon as we can!</p>
+              <p class="text-light">Thank Your For Your Message!</p>
 
           </div>
-        </div>
-            <div class="inner contact">
-
-                <div class="contact-form">
-
-                    <form id="contact-us" method="post" action="{% url 'emailsent' %}">{% csrf_token %}
-                        {{ form.non_field_errors }}
-                        <div class="row">
-                            <div class="col-lg-4 ml-auto text-center">
-                            {{ form.name }}
-                            </div>
-                            <div class="col-lg-4 mr-auto text-center">
-                            {{ form.email }}
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-8 mx-auto text-center">
-                            {{ form.subject }}
-
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-8 mx-auto text-center">
-                            {{ form.message }}
-
-                            </div>
-                        </div>
-                        <div class="relative fullwidth col-xs-12">
-
-                            <button type="submit" id="submit" name="submit" class="btn btn-primary btn-xl">Send</button>
-                        </div>
-                    </form>
-
-                </div>
-            </div>
         </div>
       </div>
     </header>
