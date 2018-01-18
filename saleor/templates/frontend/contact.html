@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>StudentsEat - Food Delivery Service</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="{% static 'vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/creative.min.css' %}" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="{% url 'frontend:index' %}"><img class="img-fluid" src="{% static 'img/logo.svg' %}" style="width: 25%; height: 25%" alt=""></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'frontend:about' %}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="{% url 'frontend:index' %}">How It Works</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="{% url 'frontend:contact' %}">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead contact home text-center text-white d-flex">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h2 class="text">
+              Get In Touch
+            </h2>
+            <hr>
+          </div>
+          <div class="col-lg-8 mx-auto">
+              <p class="text-light">We’ll answer any questions as soon as we can!</p>
+
+          </div>
+        </div>
+            <div class="inner contact">
+
+                <div class="contact-form">
+
+                    <form id="contact-us" method="post" action="{% url 'frontend:emailsent' %}">{% csrf_token %}
+                        {{ form.non_field_errors }}
+                        <div class="row">
+                            <div class="col-lg-4 ml-auto text-center">
+                            {{ form.name }}
+                            </div>
+                            <div class="col-lg-4 mr-auto text-center">
+                            {{ form.email }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto text-center">
+                            {{ form.subject }}
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto text-center">
+                            {{ form.message }}
+
+                            </div>
+                        </div>
+                        <div class="relative fullwidth col-xs-12">
+
+                            <button type="submit" id="submit" name="submit" class="btn btn-primary btn-xl">Send</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+      </div>
+    </header>
+
+
+
+
+
+    <section id="footer" class="bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'vendor/scrollreveal/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'vendor/magnific-popup/jquery.magnific-popup.min.js' %}}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{% static 'js/creative.min.js' %}"></script>
+
+  </body>
+
+</html>

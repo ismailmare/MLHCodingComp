@@ -4,15 +4,16 @@ from django.template.loader import get_template
 import requests,json
 from django import forms
 from django.core.mail import send_mail
-from frontend.forms import ContactForm
+from .forms import ContactForm
 from django import forms
+from django.template.response import TemplateResponse
 
 def index(request):
-    return render(request, "index.html", {})
+    return TemplateResponse(request, "frontend/index.html", {})
 
 
 def about(request):
-    return render(request, "about.html", {})
+    return TemplateResponse(request, "frontend/about.html", {})
 
 
 def campus(request):
@@ -23,12 +24,12 @@ def campus(request):
         'glf-api-version': "2"
     }
     response = requests.request("GET", url, headers=headers)
-    return render(request, "campus.html", {})
+    return TemplateResponse(request, "frontend/campus.html", {})
 
 
 def contact(request):
     form = ContactForm()
-    return render(request, "contact.html", {'form': form})
+    return TemplateResponse(request, "frontend/contact.html", {'form': form})
 
 
 def emailsent(request):
@@ -42,8 +43,8 @@ def emailsent(request):
             sender = form.cleaned_data['email']
             recipients = ['info@horizondesigns.ca', 'ismailmare@gmail.com']
             #send_mail(subject, message, sender, recipients)
-            return render(request, "emailsent.html", {})
+            return TemplateResponse(request, "frontend/emailsent.html", {})
 
     else:
         form = ContactForm()
-    return render(request, "contact.html", {'form': form})
+        return TemplateResponse(request, "frontend/contact.html", {'form': form})

@@ -17,9 +17,10 @@ from .product.urls import urlpatterns as product_urls
 from .registration.urls import urlpatterns as registration_urls
 from .search.urls import urlpatterns as search_urls
 from .userprofile.urls import urlpatterns as userprofile_urls
+from .frontend.urls import urlpatterns as frontend_urls
 
 urlpatterns = [
-    url(r'^', include(core_urls)),
+    url(r'^/shop', include(core_urls)),
     url(r'^account/', include(registration_urls)),
     url(r'^cart/', include((cart_urls, 'cart'), namespace='cart')),
     url(r'^checkout/',
@@ -40,6 +41,8 @@ urlpatterns = [
         name='django.contrib.sitemaps.views.sitemap'),
     url(r'', include('payments.urls')),
     url('', include('social_django.urls', namespace='social')),
+    url(r'^',
+        include((frontend_urls, 'frontend'), namespace='frontend')),
 ]
 
 if settings.DEBUG:

@@ -11,7 +11,7 @@ def get_list(text):
     return [item.strip() for item in text.split(',')]
 
 
-DEBUG = ast.literal_eval(os.environ.get('DEBUG', 'True'))
+DEBUG = ast.literal_eval(os.environ.get('DEBUG', 'False'))
 
 SITE_ID = 1
 
@@ -78,6 +78,7 @@ MEDIA_URL = '/media/'
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_DIRS = [
     ('assets', os.path.join(PROJECT_ROOT, 'saleor', 'static', 'assets')),
     ('images', os.path.join(PROJECT_ROOT, 'saleor', 'static', 'images')),
@@ -171,6 +172,7 @@ INSTALLED_APPS = [
     'saleor.search',
     'saleor.site',
     'saleor.data_feeds',
+    'saleor.frontend',
 
     # External apps
     'versatileimagefield',
@@ -428,3 +430,6 @@ IMPERSONATE = {
     'USE_HTTP_REFERER': True,
     'CUSTOM_ALLOW': 'saleor.userprofile.impersonate.can_impersonate'
 }
+
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
