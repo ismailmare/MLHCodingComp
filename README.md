@@ -1,6 +1,6 @@
 # STUDENTS EAT
 
-
+## This project has been abandoned for the time being
 
 
 
